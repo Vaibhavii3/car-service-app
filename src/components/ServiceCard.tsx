@@ -1,18 +1,31 @@
 
 import React from 'react';
 import { LucideIcon } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface ServiceCardProps {
   icon: LucideIcon;
   title: string;
   onClick?: () => void;
+  path?: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, onClick }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, onClick, path }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    }
+    if (path) {
+      navigate(path);
+    }
+  };
+
   return (
     <div 
       className="service-card animate-fade-in-up"
-      onClick={onClick}
+      onClick={handleClick}
     >
       <div className="service-card-icon">
         <Icon size={24} />

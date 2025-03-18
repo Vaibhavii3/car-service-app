@@ -16,18 +16,18 @@ import {
 const ServiceGrid: React.FC = () => {
   // Define service data
   const services = [
-    { title: 'Car Service', icon: Car },
-    { title: 'Tyres & Wheel Care', icon: CircleDashed },
-    { title: 'Denting & Painting', icon: Hammer },
-    { title: 'AC Service & Repair', icon: Droplet },
-    { title: 'Car Spa & Cleaning', icon: Car },
-    { title: 'Batteries', icon: Battery },
-    { title: 'Insurance Claims', icon: Shield },
-    { title: 'Windshield & Lights', icon: LayoutGrid },
-    { title: 'Clutch & Brakes', icon: Wrench },
-    { title: 'Dryclean', icon: Car },
-    { title: 'Car Wash', icon: Droplet },
-    { title: 'Oiling', icon: Fuel }, // Updated from Oil to Fuel
+    { title: 'Car Service', icon: Car, path: '/service/car-service' },
+    { title: 'Tyres & Wheel Care', icon: CircleDashed, path: '/service/tyres' },
+    { title: 'Denting & Painting', icon: Hammer, path: '/service/denting' },
+    { title: 'AC Service & Repair', icon: Droplet, path: '/service/ac' },
+    { title: 'Car Spa & Cleaning', icon: Car, path: '/service/spa' },
+    { title: 'Batteries', icon: Battery, path: '/service/batteries' },
+    { title: 'Insurance Claims', icon: Shield, path: '/service/insurance' },
+    { title: 'Windshield & Lights', icon: LayoutGrid, path: '/service/windshield' },
+    { title: 'Clutch & Brakes', icon: Wrench, path: '/service/clutch' },
+    { title: 'Dryclean', icon: Car, path: '/service/dryclean' },
+    { title: 'Car Wash', icon: Droplet, path: '/service/wash' },
+    { title: 'Oiling', icon: Fuel, path: '/service/oiling' }, 
   ];
 
   return (
@@ -39,6 +39,7 @@ const ServiceGrid: React.FC = () => {
             key={index} 
             icon={service.icon} 
             title={service.title} 
+            path={service.path}
             onClick={() => console.log(`Selected service: ${service.title}`)}
           />
         ))}
