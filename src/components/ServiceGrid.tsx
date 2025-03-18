@@ -10,7 +10,7 @@ import {
   Hammer, 
   LayoutGrid, 
   CircleDashed,
-  Oil
+  Fuel // Replacing Oil with Fuel which is available in lucide-react
 } from 'lucide-react';
 
 const ServiceGrid: React.FC = () => {
@@ -27,7 +27,7 @@ const ServiceGrid: React.FC = () => {
     { title: 'Clutch & Brakes', icon: Wrench },
     { title: 'Dryclean', icon: Car },
     { title: 'Car Wash', icon: Droplet },
-    { title: 'Oiling', icon: Oil },
+    { title: 'Oiling', icon: Fuel }, // Updated from Oil to Fuel
   ];
 
   return (
